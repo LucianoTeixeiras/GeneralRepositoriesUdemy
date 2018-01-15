@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug  7 12:18:28 2017
-
-@author: Jones
-"""
 import pandas as pd
 
 dados = pd.read_csv('mercado.csv', header = None)
