@@ -1,4 +1,6 @@
-public class aula16 {
+package aula_16;
+
+public class aula_16 {
 
     public static void main(String[] args) {
 

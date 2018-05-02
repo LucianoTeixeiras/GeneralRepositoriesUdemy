@@ -1,7 +1,9 @@
+package aula_21;
+
 import java.util.Locale;
 import java.util.Scanner;
 
-public class aula21 {
+public class aula_21 {
 
     public static void main(String[] args) {
 
