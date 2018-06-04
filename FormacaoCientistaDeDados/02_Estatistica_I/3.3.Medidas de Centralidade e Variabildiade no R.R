@@ -8,7 +8,8 @@ median(jogadores)
 
 quartis  = quantile(jogadores)
 
-quartis[4]
+quartis
+quartis[2]
 
 sd(jogadores)
 
