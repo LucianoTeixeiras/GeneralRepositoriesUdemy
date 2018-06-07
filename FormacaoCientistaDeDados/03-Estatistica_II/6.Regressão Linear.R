@@ -26,6 +26,8 @@ plot(modelo$fitted.values, cars$dist)
 
 mtcars
 
+colnames(mtcars)
+
 dim(mtcars)
 
 cor(mtcars[1:4])
@@ -47,7 +49,4 @@ summary(modelo)$r.squared
 summary(modelo)$adj.r.squared
 
 predict(modelo,data.frame(disp = 200, hp=100, cyl=4))
-
-
-
 
