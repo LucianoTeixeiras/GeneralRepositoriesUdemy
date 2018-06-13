@@ -8,7 +8,7 @@ summary(mcars)
 
 cor(mtcars[1:4])
 
-modeloR = lm(mpg ~ disp, data=mtcars)
+modeloR = lm(mpg ~ disp + hp + cyl, data=mtcars)
 
 modeloR
 
@@ -20,5 +20,5 @@ plot(mpg ~ disp, data = mtcars)
 
 abline(modeloR)
 
-predict(modeloR, data.frame(disp=200))
+predict(modeloR, data.frame(disp = 200, hp = 100, cyl = 4))
 
