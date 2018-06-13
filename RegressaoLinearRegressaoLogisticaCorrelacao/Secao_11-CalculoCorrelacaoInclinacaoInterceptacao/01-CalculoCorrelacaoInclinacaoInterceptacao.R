@@ -1,0 +1,1 @@
+# Calculo - Correlacao - Inclinacao - Interceptacao
