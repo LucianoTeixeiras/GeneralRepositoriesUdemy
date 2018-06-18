@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgoritmosEmJava/AlgoritmosEmJava.iml" filepath="$PROJECT_DIR$/AlgoritmosEmJava/AlgoritmosEmJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Certificado/Certificado.iml" filepath="$PROJECT_DIR$/Certificado/Certificado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UdemyAlgoritmoEmJava.iml" filepath="$PROJECT_DIR$/UdemyAlgoritmoEmJava.iml" />
+    </modules>
+  </component>
+</project>
