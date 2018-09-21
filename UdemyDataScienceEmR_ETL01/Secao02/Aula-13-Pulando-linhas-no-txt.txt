@@ -1,0 +1,8 @@
+# Pulando linhas ao importar um txt
+
+
+cap4<-read.table("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosTABeTexto.txt",head=T,sep="\t",skip = 6)
+
+head(cap4)
+cap4<-as_tibble(cap4)
+

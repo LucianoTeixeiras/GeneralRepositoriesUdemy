@@ -1,0 +1,11 @@
+# Outra funções mais rápida e que já retorna um tibble
+
+install.packages("readr")
+library(readr)
+
+d<-read_table2("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosTAB.txt")
+
+d2<-read_table2("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosEspeçoBranco.txt")
+
+d3<-read_table2("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosTABeTexto.txt",skip=6)
+

@@ -1,0 +1,15 @@
+# Importando txt com sep ";"
+
+cap3<-read.table("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosPontoeVirgula.txt",head=T,sep=";")
+
+head(cap3)
+cap<-as_tibble(cap3)
+
+
+# Outros separadores 
+
+cap4<-read.table("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosOutrosSeparadores.txt",head=T,sep="&")
+
+head(cap4)
+cap4<-as_tibble(cap4)
+

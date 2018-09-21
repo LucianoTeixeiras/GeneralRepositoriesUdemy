@@ -1,0 +1,17 @@
+
+###### Importando CSV
+
+#separado por vírgula
+c<-read.table("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosCSV_virgula.csv", head=T,sep=";")
+
+c2<-as_tibble(c)
+
+
+#ou usando as novas funções
+library(readr)
+c3<-read_csv2("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosCSV_virgula.csv")
+
+
+# ou
+c4<-read.csv("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosCSV_virgula.csv", head=T,sep=";")
+c4<-as_tibble(c4)

@@ -1,0 +1,10 @@
+
+#Lendo textos na internet
+
+
+net<-read.table("http://www.leg.ufpr.br/~paulojus/dados/gam01.txt")
+names(net)<-c("Variável 1","Variável 2","Cotação")
+
+net<-as_tibble(net)
+
+

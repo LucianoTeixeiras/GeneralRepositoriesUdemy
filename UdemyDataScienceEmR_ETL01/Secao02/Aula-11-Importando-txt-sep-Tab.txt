@@ -1,0 +1,7 @@
+# Importando txt separado por TAB
+
+
+cap2<-read.table("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosTAB.txt",head=T,sep="\t")
+
+head(cap2)
+cap<-as_tibble(cap2)

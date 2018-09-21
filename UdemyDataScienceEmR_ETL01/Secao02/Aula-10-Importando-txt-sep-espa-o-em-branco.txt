@@ -1,0 +1,6 @@
+# Importando txt separado por espaço em branco
+
+cap<-read.table("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/caprinosEspeçoBranco.txt",head=T)
+
+head(cap)
+cap<-as_tibble(cap)
