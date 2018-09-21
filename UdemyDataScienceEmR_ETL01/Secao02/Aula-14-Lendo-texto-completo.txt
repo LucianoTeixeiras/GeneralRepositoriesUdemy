@@ -1,4 +1,3 @@
-
 # Lendo um arquivo de texto "corrido"
 
  tex<-readLines("C:/Users/Isaias/Documents/ISAIAS TRABALHO/Cursos/R/Processo de ETL no R/dados/texto.txt")
