@@ -32,24 +32,33 @@ dados<-as_tibble(dados)
 
 dados_1<-dados[,1:8]
 
+dados_1
+
 dados_2<-dados[,9:16]
 
-#alterando o nome das colunas em cada partição
+dados_2
 
-names(dados_1)<-c("Local","Total","< 4 anos","4 a 7","8 a 10","11 a 14","15 ou mais","Não-determinados")
+# 05 - Alterando o nome das colunas em cada partição
 
-names(dados_2)<-c("Local","Total","< 4 anos","4 a 7","8 a 10","11 a 14","15 ou mais","Não-determinados")
+names(dados_1)<-c("Local","Total","< 4 anos","4 a 7 anos","8 a 10 anos","11 a 14 anos","15 ou mais","Não determinados")
 
+dados_1
 
+names(dados_2)<-c("Local","Total","< 4 anos","4 a 7 anos","8 a 10 anos","11 a 14 anos","15 ou mais","Não determinados")
 
-#os valores da variável ANOS DE ESTUDO estão espalhados nas colunas (Tipo 4 para Tipo 1) ....
+dados_2
 
-a<-dados_1 %>% gather("< 4 anos", "4 a 7 anos","8 a 10 anos","10 a 14 anos","15 ou mais","Não determinados", key = "Anos de estudo", value = "Quantidade")
+# 06 - Organizando os valores da variável ANOS DE ESTUDO estão espalhados nas colunas (Tipo 4 para Tipo 1) ....
 
-b<-dados_2 %>% gather("< 4 anos", "4 a 7 anos","8 a 10 anos","10 a 14 anos","15 ou mais","Não determinados", key = "Anos de estudo", value = "Porcentagem (%)")
+a<-dados_1 %>% gather("< 4 anos", "4 a 7 anos","8 a 10 anos","11 a 14 anos","15 ou mais","Não determinados", key = "Anos de estudo", value = "Quantidade")
 
+a
 
-# Montando o arquivo final
+b<-dados_2 %>% gather("< 4 anos", "4 a 7 anos","8 a 10 anos","11 a 14 anos","15 ou mais","Não determinados", key = "Anos de estudo", value = "Porcentagem (%)")
+
+b
+
+# 07 - Montando o arquivo final
 
 dados_arrumados<-cbind(a,b)
 
@@ -59,6 +68,4 @@ dados_arrumados<-dados_arrumados[,c(1,3,4,8)]
 
 dados_arrumados<-as_tibble(dados_arrumados)
 
-
-
-
+dados_arrumados
