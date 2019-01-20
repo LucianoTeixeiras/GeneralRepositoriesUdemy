@@ -23,9 +23,10 @@ sample(c(1000),1)
 
 quiz = sample(c(0,1), 100, replace = TRUE, prob=c(0.5,0.5))
 
+quiz
+
 length(quiz[quiz==1])
 
 length(quiz[quiz==0])
-
 
 quiz1 = sample(c(1,2,3,4,5), 10, replace = FALSE, prob=c(0.2,0.2,0.2,0.2,0.2))
