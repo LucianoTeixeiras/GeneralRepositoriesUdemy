@@ -69,6 +69,17 @@ dbinom(7,12,0.25)
 
 dbinom(3,6,0.16)
 
+# Pergunta 1:
+# Qual a probabilidade de jogar um dado 6 vezes, e dar 6 a metade das jogadas?
+
+dbinom(3,6,0.16)
+
+# Pergunta 2:
+# Considerando uma distribuição binomial, qual a probabilidade de um veículo 
+# que alcança 100 km por hora uma vez em cada 10 corridas, alcanças 110 km por hora?
+
+X
+
 # Pergunta 3:
 # Você vai fazer uma prova que contém 10 questões com quatro alternativas cada.
 # Você precisa acertar 6. Você não estudou. Qual sua chance de passar?
@@ -110,6 +121,8 @@ dbinom(4, 10,0.25)
 # 2 – Acertar na mosca as nenhuma vez
 # 3 – Acertar na mosca as 5 vezes
 
+dbinom(1, 5, 0.3)
+dbinom(0, 5, 0.3)
 dbinom(5, 5, 0.3)
 
 # Pergunta 9:
@@ -127,4 +140,7 @@ dbinom(4, 5, 0.6)
 # 2 – 1 peça com defeito
 # 3 – 2 peças com defeito
 
+dbinom(0,10,0.02)
+dbinom(1,10,0.02)
 dbinom(2,10,0.02)
+
