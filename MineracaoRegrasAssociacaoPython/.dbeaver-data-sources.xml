@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql8-16a8a111ed7-580ef1b3d70ae2cb" provider="mysql" driver="mysql8" name="MySQL 8+ - pizzaria" save-password="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="pizzaria" url="jdbc:mysql://localhost:3306/pizzaria" user="root" password="PxBUdhEUE0Nl8w==" home="C:\Program Files\MySQL\MySQL Router 8.0" type="dev">
+			<property name="connectTimeout" value="20000"/>
+			<provider-property name="@dbeaver-serverTimezone@" value="America/Sao_Paulo"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="true">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>
