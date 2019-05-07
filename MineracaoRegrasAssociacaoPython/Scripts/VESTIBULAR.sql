@@ -247,3 +247,173 @@ from
 	vestibular.socioeconomica
 group by
 	curso;
+
+
+SELECT
+	count(*),
+	GetClassePontos(total_pontos)
+from
+	vestibular.socioeconomica
+group by
+	GetClassePontos(total_pontos);
+
+SELECT
+	count(*),
+	GetNomeCurso(curso)
+from
+	vestibular.socioeconomica
+group by
+	GetNomeCurso(curso);
+	
+SELECT
+	count(*),
+	GetGrauCurso(curso)
+from
+	vestibular.socioeconomica
+group by
+	GetGrauCurso(curso);
+	
+SELECT
+	count(*),
+	GetPeriodoCurso(curso)
+from
+	vestibular.socioeconomica
+group by
+	GetPeriodoCurso(curso);
+	
+SELECT
+	count(*),
+	GetFaixaIdade(idade)
+from
+	vestibular.socioeconomica
+group by
+	GetFaixaIdade(idade);
+	
+SELECT
+	count(*),
+	local_origem
+from
+	vestibular.socioeconomica
+group by
+	local_origem;
+	
+SELECT
+	count(*),
+	tipo_instituicao
+from
+	vestibular.socioeconomica
+group by
+	tipo_instituicao;
+	
+SELECT
+	count(*),
+	renda_familiar
+from
+	vestibular.socioeconomica
+group by
+	renda_familiar;
+	
+SELECT
+	count(*),
+	tipo_residencia
+from
+	vestibular.socioeconomica
+group by
+	tipo_residencia;
+	
+SELECT
+	count(*),
+	grau_escolaridade
+from
+	vestibular.socioeconomica
+group by
+	grau_escolaridade;
+	
+SELECT
+	count(*),
+	motivo
+from
+	vestibular.socioeconomica
+group by
+	motivo;
+	
+SELECT
+	count(*),
+	transporte
+from
+	vestibular.socioeconomica
+group by
+	transporte;
+	
+SELECT
+	count(*),
+	instrucao_pai
+from
+	vestibular.socioeconomica
+group by
+	instrucao_pai;
+	
+SELECT
+	count(*),
+	instrucao_mae
+from
+	vestibular.socioeconomica
+group by
+	instrucao_mae;
+	
+SELECT
+	count(*),
+	automovel
+from
+	vestibular.socioeconomica
+group by
+	automovel;
+	
+SELECT
+	count(*),
+	livros
+from
+	vestibular.socioeconomica
+group by
+	livros;
+	
+SELECT
+	count(*),
+	internet
+from
+	vestibular.socioeconomica
+group by
+	internet;
+	
+SELECT
+	count(*),
+	leitura
+from
+	vestibular.socioeconomica
+group by
+	leitura;
+	
+# Mineração
+
+SELECT
+	GetClassePontos(total_pontos) as Pontos,
+	GetNomeCurso(curso) as Curso,
+	GetGrauCurso(curso) as Grau,
+	GetPeriodoCurso(curso) as Periodo,
+	sexo as Sexo,
+	GetFaixaIdade(idade) as Idade,
+	local_origem,
+	tipo_instituicao,
+	renda_familiar,
+	tipo_residencia,
+	grau_escolaridade,
+	motivo,
+	transporte,
+	instrucao_pai,
+	instrucao_mae,
+	automovel,
+	livros,
+	leitura,
+	internet
+from vestibular.socioeconomica;
+
