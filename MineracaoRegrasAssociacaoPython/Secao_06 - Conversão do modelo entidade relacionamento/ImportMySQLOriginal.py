@@ -16,4 +16,3 @@ for linha in cursor:
 
 cursor.close()
 conexao.close()
-
