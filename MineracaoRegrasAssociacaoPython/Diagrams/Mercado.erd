@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="Mercado.erd" time="201905071029">
+	<entities>
+		<data-source id="mysql8-16a8a111ed7-580ef1b3d70ae2cb">
+			<entity id="1" name="produtos" fq-name="mercado.produtos" order="0" x="680" y="160">
+				<path name="mercado"/>
+			</entity>
+			<entity id="2" name="venda_produtos" fq-name="mercado.venda_produtos" order="1" x="400" y="140">
+				<path name="mercado"/>
+			</entity>
+			<entity id="3" name="vendas" fq-name="mercado.vendas" order="2" x="160" y="160">
+				<path name="mercado"/>
+			</entity>
+		</data-source>
+	</entities>
+	<notes/>
+	<relations>
+		<relation name="fk_venda_produtos_produto" fq-name="mercado.venda_produtos.fk_venda_produtos_produto" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="fk_venda_produtos_venda" fq-name="mercado.venda_produtos.fk_venda_produtos_venda" type="fk" pk-ref="3" fk-ref="2"/>
+	</relations>
+</diagram>
