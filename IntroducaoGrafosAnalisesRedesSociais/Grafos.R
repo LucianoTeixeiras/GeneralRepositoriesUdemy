@@ -8,7 +8,7 @@ library(igraph)
 
 demo(community)
 
-# Grafo 01
+# Igraph Parte 01 - Grafos
 
 grafo01 = graph(edges = c(1,2,3,4))
 
@@ -22,7 +22,7 @@ grafo03 = graph(edges = c(1,2,2,3,3,4,4,1,1,1))
 
 plot(grafo03)
 
-# Grafo literal
+# Igraph Parte 02 - Grafo literal
 
 grafo04 = graph_from_literal(1-+2,2-+3,3-+4,3++4,4-+1)
 
@@ -47,6 +47,8 @@ plot(grafo08)
 grafo09 = graph(edges = c("A","B","B","C","C","D","D","E","E","A","A","C","C","B"))
 
 plot(grafo09)
+
+# Igraph Parte 03
 
 grafo10 = graph(edges = c("A","B","B","C","C","D","D","E","E","A","A","C","C","B"), isolates = c("F","G"))
 
@@ -87,3 +89,32 @@ grafo11
 V(grafo11)$Cor = c("blue", "green", "red", "yellow")
 
 plot(grafo11)
+
+# Igraph Parte 04 - Impressão e Importação
+
+V(grafo11)$Peso
+
+plot(grafo11, vertex.size=vertex_attr(grafo11)$Peso)
+
+edge_attr(grafo11)$Peso
+
+plot(grafo11, vertex.size=vertex_attr(grafo11)$Peso, edge.width=edge_attr(grafo11)$Peso)
+
+plot(grafo11, vertex.size=vertex_attr(grafo11)$Peso, edge.width=edge_attr(grafo11)$Peso, vertex.color=vertex_attr(grafo11)$Cor)
+
+plot(grafo11, vertex.size=vertex_attr(grafo11)$Peso, edge.width=edge_attr(grafo11)$Peso, vertex.color=vertex_attr(grafo11)$Cor, edge.curved=0.4, frame=T, main="Grafo LTS", vertex.shape="square")
+
+# Grafo dinâmico
+
+tkplot(grafo11, vertex.size=vertex_attr(grafo11)$Peso, edge.width=edge_attr(grafo11)$Peso, vertex.color=vertex_attr(grafo11)$Cor, edge.curved=0.4, frame=T, main="Grafo LTS", vertex.shape="square")
+
+# Importando um Grafo, com função file.chose para encontrar o arquivo
+
+grafo12 = read_graph(file.choose(),format=c("graphml"))
+
+grafo12
+
+tkplot(grafo12)
+
+# Igraph Parte 05 - 
+
