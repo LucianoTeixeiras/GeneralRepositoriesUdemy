@@ -118,3 +118,95 @@ tkplot(grafo12)
 
 # Igraph Parte 05 - 
 
+degree(grafo12, mode = "in")
+
+degree(grafo12, mode = "out")
+
+degree(grafo12, mode = "all")
+
+grau = degree(grafo12, mode = "in")
+
+plot(grafo12, vertex.size = grau+1)
+
+tkplot(grafo12, vertex.size = grau+1)
+
+diameter(grafo12, directed = T)
+
+diameter(grafo12, directed = F)
+
+get_diameter(grafo12, directed = F)
+
+edge_density(grafo12)
+
+neighborhood(grafo12, mode = "out")
+
+grafo13 = grafo12
+
+isomorphic(grafo12,grafo13)
+
+# Igraph Parte 06 - Medindo distâncias de melhor caminho
+
+dist = graph(edges = c("A","C","A","B","B","E","B","F","C","D","G","H","D","H","E","H","F","G"), directed = T)
+
+plot(dist)
+
+E(dist)$weight = c(2,1,2,1,2,1,1,3,1)
+
+plot(dist)
+
+# Manual
+distances(dist,1,8)
+
+# Automatico
+distances(dist,V(dist)$name=="A",V(dist)$name=="H")
+
+caminho = shortest_paths(dist,V(dist)$name=="A",V(dist)$name=="H", output = c("both"))
+caminho
+
+# Imprimindo grafo e pintando
+
+for (i in 1:length(V(dist))) {
+  V(dist)$color[i] <- ifelse(i %in% as.vector(unlist(caminho$vpath)),"green","gray")
+}
+
+for (i in 1:length(E(dist))) {
+  E(dist)$color[i] <- ifelse(i %in% as.vector(unlist(caminho$epath)),"green","gray")
+}
+
+plot(dist, edge.label = E(dist)$weight)
+
+tkplot(dist, edge.label = E(dist)$weight)
+
+# Igraph Parte 07 - Comunidades e Cliques
+
+comun = cluster_edge_betweenness(grafo12)
+
+comun
+
+comun = cluster_edge_betweenness(dist)
+
+comun
+
+plot(comun, dist)
+
+clic = cliques(as.undirected(grafo12), min = 4)
+length(clic)
+clic
+
+# Grafos de exemplos
+
+install.packages('igraphdata')
+
+library(igraphdata)
+
+data("Koenigsberg")
+
+plot("Koenigsberg")
+
+data("UKfaculty")
+
+UKfaculty
+
+plot("UKfaculty")
+
+comun = cluster_edge_betweenness(UKfaculty)
