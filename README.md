@@ -1,2 +1,2 @@
 # UdemyGo
-Repositório Reservado ao processo de criação e aprendizado dos conteúdos do Curso de Go Do Leonardo Leitão na Udemy
+Repositório Reservado ao Processo de Aprendizado do Curso de Go Do Leonardo Leitão na Udemy
